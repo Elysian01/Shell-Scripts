@@ -5,7 +5,8 @@ int main()
 {
     char buf[1024];
     // 0 means STDIN, 1 means STDOUT
-    read(0, buf, sizeof(buf));
-    write(1, buf, sizeof(buf));
+    // STDIN_FILENO macro for stdin
+    read(STDIN_FILENO, buf, sizeof(buf));
+    write(STDOUT_FILENO, buf, sizeof(buf));
     return 0;
 }
