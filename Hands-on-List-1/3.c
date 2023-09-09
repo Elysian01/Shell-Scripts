@@ -20,7 +20,7 @@ int main()
     int fd = creat("temp.txt", S_IRUSR | S_IWUSR);
     if (fd == -1)
     {
-        perror("Error creating file");
+        printf("Error creating file");
         exit(0);
     }
     printf("file descriptor: %d\n", fd);

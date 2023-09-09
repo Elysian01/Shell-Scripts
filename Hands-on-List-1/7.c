@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
 {
         if (argc != 3)
         {
-                printf("You are useless\n");
+                printf("Provide 2 arguments\n");
                 return -1;
         }
         int fd_read = open(argv[1], O_RDONLY);
@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
         int fd_write = open(argv[2], O_WRONLY | O_CREAT, 0600);
 
         if (fd_read == -1 || fd_write == -1)
-                printf("Your system is useless\n");
+                printf("System can't process\n");
 
         // Logic
         while (1)

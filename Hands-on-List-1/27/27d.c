@@ -18,6 +18,7 @@ Date: 28th Aug, 2023.
 int main(void)
 {
 	char *arr[] = {"ls", "-R", "-l", NULL};
+	// v => vector
 	execv("/bin/ls", arr);
 
 	return 0;

@@ -17,6 +17,7 @@ Date: 28th Aug, 2023.
 
 int main(void)
 {
+	// lp => yaha par path of cmd deni ki jarurat nhi hai
 	execlp("ls", "ls", "-R", "-l", NULL);
 
 	return 0;

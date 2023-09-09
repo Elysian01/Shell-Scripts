@@ -17,6 +17,7 @@ Date: 28th Aug, 2023.
 int main(void)
 {
 	char *envp[] = {NULL};
+	// le => list format, e=>environment
 	execle("/bin/ls", "ls", "-R", "-l", NULL, envp);
 
 	return 0;

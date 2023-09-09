@@ -2,53 +2,53 @@
 ============================================================================
 Name : 25.c
 Author : Abhishek Gupta
-Description : Write a program to create three child processes. The parent should wait for a particular child (use
-                waitpid system call).
+Description : Write a program to create three child processes. The parent should wait
+                for a particular child (use waitpid system call).
 Date: 7th Sept, 2023.
 ============================================================================
 */
 
 #include <stdio.h>
 #include <unistd.h>
-#include <stdlib.h>
-#include <sys/types.h>
 #include <sys/wait.h>
 
-int main()
+int main(void)
 {
-    pid_t child1, child2, child3;
-    child1 = fork();
-    if (child1 == 0)
+    int pid = fork();
+    if (pid)
     {
-        printf("Child 1 (PID: %d) is running.\n", getpid());
-        exit(0);
-    }
-    else
-    {
-        child2 = fork();
-        if (child2 == 0)
+
+        if (fork())
         {
-            printf("Child 2 (PID: %d) is running.\n", getpid());
-            exit(0);
+            if (!fork())
+            {
+                printf("Child#3 process id: %d\n", getpid());
+                printf("Child#3 parent process id: %d\n", getppid());
+                sleep(1);
+                printf("Child#3 wokeup\n");
+            }
         }
         else
         {
-            child3 = fork();
-            if (child3 == 0)
-            {
-                printf("Child 3 (PID: %d) is running.\n", getpid());
-                exit(0);
-            }
-            else
-            {
-                printf("Parent (PID: %d) is waiting for Child 2 (PID: %d) to complete.\n", getpid(), child2);
-                int status;
-                int child_pid = waitpid(child2, &status, 0);
-                if (WIFEXITED(status))
-                {
-                    printf("Parent: Child 2 (PID: %d) exited with status %d.\n", child2, WEXITSTATUS(status));
-                }
-            }
+            printf("Child#2 process id: %d\n", getpid());
+            printf("Child#2 parent process id: %d\n", getppid());
+            sleep(5);
+            printf("Child#2 wokeup\n");
         }
     }
+    else
+    {
+        printf("Child#1 process id: %d\n", getpid());
+        printf("Child#1 parent process id: %d\n", getppid());
+        sleep(3);
+        printf("Child#1 wokeup\n");
+    }
+    // pid, status varaible (int), options
+    waitpid(pid, NULL, 0);
+
+    // wait(0) => process grp mai se koi bhi ek process terminate hogi, fir woo age execute hona chalu hoga
+    // wait(-1) => koi bhi ek child terminate hoga tho, parent wapas execution start karega
+    // wait(pid) => ussi pid ka child terminate hoga tho, parent wapas execution start karegachild terminate hoga tho, parent wapas execution start karega
+
+    return 0;
 }

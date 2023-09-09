@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
 {
 	if (argc != 2)
 	{
-		printf("2 arguments are required\n");
+		printf("1 arguments are required\n");
 		return 0;
 	}
 	int f1 = open(argv[1], O_CREAT | O_EXCL | O_WRONLY, 0777);
@@ -37,6 +37,6 @@ int main(int argc, char *argv[])
 	if (x)
 		printf("Lseek return value: %d\n", x);
 	else
-		perror("Lseek: ");
+		printf("Lseek: ");
 	write(f1, buff, sizeof(buff));
 }
