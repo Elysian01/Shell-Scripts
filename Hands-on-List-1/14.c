@@ -1,8 +1,18 @@
+/*
+============================================================================
+Name : 14.c
+Author : Abhishek Gupta
+Description :
+Date: 28th Aug, 2023.
+============================================================================
+*/
+
 #include <stdio.h>
-#include<string.h>
+#include <string.h>
 #include <sys/stat.h>
 
-int main(int argc, char *argv[]) {
+int main(int argc, char *argv[])
+{
 
 	if (argc != 2)
 	{
@@ -14,9 +24,8 @@ int main(int argc, char *argv[]) {
 	struct stat sb;
 	// stat(filename, struct variable);
 	stat(argv[1], &sb);
-	
-	
-    	// TO PRINT FILE TYPE INFO
+
+	// TO PRINT FILE TYPE INFO
 	printf("File Type: ");
 	switch (sb.st_mode & S_IFMT)
 	{
@@ -46,6 +55,5 @@ int main(int argc, char *argv[]) {
 		break;
 	}
 
-    return 0;
+	return 0;
 }
-

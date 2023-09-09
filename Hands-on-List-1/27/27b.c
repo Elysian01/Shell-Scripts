@@ -1,19 +1,23 @@
 /*
 ============================================================================
-Name : 2.c
+Name : 27.c
 Author : Abhishek Gupta
-Description : Write a simple program to execute in an infinite loop at the background. Go to /proc directory and
-identify all the process related information in the corresponding proc directory.
+Description : Write a program to execute ls -Rl by the following system calls
+				a. execl
+				b. execlp
+				c. execle
+				d. execv
+				e. execvp
 Date: 28th Aug, 2023.
 ============================================================================
 */
 
 #include <stdio.h>
+#include <unistd.h>
 
-int main()
+int main(void)
 {
-	while (1)
-	{
-	}
+	execlp("ls", "ls", "-R", "-l", NULL);
+
 	return 0;
 }

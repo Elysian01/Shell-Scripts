@@ -1,3 +1,13 @@
+/*
+============================================================================
+Name : 4.c
+Author : Abhishek Gupta
+Description : Write a program to open an existing file with read write mode.
+              Try O_EXCL flag also.
+Date: 28th Aug, 2023.
+============================================================================
+*/
+
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <fcntl.h>
