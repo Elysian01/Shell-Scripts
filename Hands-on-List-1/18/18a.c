@@ -1,6 +1,6 @@
 /*
 ============================================================================
-Name : 18.c
+Name : 18a.c
 Author : Abhishek Gupta
 Description : Write a program to perform Record locking.
 				a. Implement write lock

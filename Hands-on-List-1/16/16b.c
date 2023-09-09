@@ -1,6 +1,6 @@
 /*
 ============================================================================
-Name : 16.c
+Name : 16b.c
 Author : Abhishek Gupta
 Description : Write a program to perform mandatory locking.
 				a. Implement write lock

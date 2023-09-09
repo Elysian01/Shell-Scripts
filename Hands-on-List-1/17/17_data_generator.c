@@ -1,6 +1,6 @@
 /*
 ============================================================================
-Name : 17.c
+Name : 17_data_generator.c
 Author : Abhishek Gupta
 Description : Write a program to simulate online ticket reservation.
 				Implement write lock Write a program to open a file, store a ticket

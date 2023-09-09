@@ -1,6 +1,6 @@
 /*
 ============================================================================
-Name : 27.c
+Name : 27b.c
 Author : Abhishek Gupta
 Description : Write a program to execute ls -Rl by the following system calls
 				a. execl
