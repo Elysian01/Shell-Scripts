@@ -4,7 +4,7 @@
 
 int main()
 {
-    printf("..................Welcome to Swiggy Services...............\n\n");
+    printf("..................Welcome to Academia...............\n\n");
     printf("Login Type\n");
     printf("Enter Your choice {1. Admin, 2.Professor, 3.Student} : ");
     int login_type, id;
