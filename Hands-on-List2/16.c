@@ -19,7 +19,7 @@ int main(void)
     pipe(fd2);
     if (fork())
     {
-        char *msg = "Message from parent.\n";
+        char *msg = "Message from parent\n";
         close(fd1[0]);
         write(fd1[1], msg, strlen(msg));
 
@@ -29,7 +29,7 @@ int main(void)
     }
     else
     {
-        char *msg = "Message from child.\n";
+        char *msg = "Message from child\n";
         close(fd1[1]);
         count = read(fd1[0], buff, sizeof(buff));
         write(STDOUT_FILENO, buff, count);

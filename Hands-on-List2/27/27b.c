@@ -3,7 +3,7 @@
 Name : 27b.c
 Author : Abhishek Gupta
 Description : Write a program to receive messages from the message queue.
-    a. with IPC_NOWAIT as a flag
+                a. with IPC_NOWAIT as a flag
 Date: 12th Oct, 2023
 ============================================================================
 */

@@ -3,7 +3,7 @@
 Name : 20a.c
 Author : Abhishek Gupta
 Description : Write two programs so that both can communicate by FIFO
-                -Use one way communication.
+                - Use one way communication.
 Date: 10th Oct, 2023
 ============================================================================
 */

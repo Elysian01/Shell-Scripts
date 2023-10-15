@@ -3,7 +3,7 @@
 Name : 26.c
 Author : Abhishek Gupta
 Description : Write a program to send messages to the message queue. Check $ipcs -q
-Date: 12th Oct, 2023
+Date: 13th Oct, 2023
 ============================================================================
 */
 
